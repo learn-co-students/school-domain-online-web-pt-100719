@@ -1,4 +1,3 @@
-# code here!
 class School
   def initialize(school_name)
     @school_name = school_name
@@ -18,10 +17,10 @@ class School
     @roster[grade] << name
   end
   
-  def grade(num)
-    roster.each do |x, y|
-      if x == num
-        return y
+  def grade(number)
+    @roster.each do |grade, student| 
+      if number == grade
+        return student
       end
     end
   end
