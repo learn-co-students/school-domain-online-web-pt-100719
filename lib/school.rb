@@ -1,3 +1,4 @@
+require 'pry'
 class School
 
   def initialize(name, roster = {})
@@ -13,6 +14,7 @@ class School
     @grade = grade
     roster[grade] = []
     roster[grade] << name
+    binding.pry
   end
   
 end
