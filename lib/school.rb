@@ -8,13 +8,17 @@ class School
   attr_accessor :name, :roster
   attr_reader :add_student
   
-  
-  def add_student(name, grade)
-    @name = name
-    @grade = grade
-    roster[grade] = []
+    def add_student(name, grade)
+    roster[grade] ||= []
     roster[grade] << name
-    binding.pry
   end
   
+  def grade(grade)
+    roster[grade]
+   end
+  
+  def sort
+    roster[9].sort!
+    roster.sort.to_h
+  end
 end
