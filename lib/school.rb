@@ -2,14 +2,21 @@
 class School
   attr_accessor :name, :roster
  
- def initialization
+   def initialization(name)
    @name = name
- end 
+   end 
  
-  def roster
-    roster = {}
+   def roster
+   @roster = Hash.new do |hash, array|
+      hash[array]
+    end 
+   end 
+  
+  def add_student(full_name, grade)
+    
   end 
- 
+  
 end 
 
-
+school = School.new
+school.roster
