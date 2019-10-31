@@ -1,22 +1,14 @@
-# code here!
+require 'pry'
 class School
-  attr_accessor :name, :roster
- 
-   def initialization(name)
-   @name = name
-   end 
- 
-   def roster
-   @roster = Hash.new do |hash, array|
-      hash[array]
-    end 
-   end 
+  attr_accessor :name
   
-  def add_student(full_name, grade)
-    
+  def name(name)
+    @name = name
   end 
+  
+# binding.pry 
   
 end 
 
-school = School.new
-school.roster
+leto = School.new 
+leto.name("Leto")
