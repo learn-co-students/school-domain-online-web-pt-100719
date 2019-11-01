@@ -1,14 +1,38 @@
 require 'pry'
 class School
-  attr_accessor :name
   
+  attr_reader :roster, :name
+  
+  def initialize(name)
+    @name = name
+    @roster = {}
+    
+  end 
+  
+  def add_student(name, grade)
+  # binding.pry
+    if !@roster.include?(grade) == true
+      @roster[grade]=[] 
+      @roster[grade]<< name
+    else 
+      @roster[grade]<< name
+    end 
+  end 
+  
+  def grade(int)
+  @roster[int]
+  end 
+    
   def name(name)
     @name = name
   end 
-  
-# binding.pry 
+ 
+ def sort 
+   
+  end  
+   
+ #binding.pry 
   
 end 
 
-leto = School.new 
-leto.name("Leto")
+leto = School.new("Leto")
