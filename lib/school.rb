@@ -27,11 +27,11 @@ class School
     @name = name
   end 
  
- def sort 
-   
+ def sort
+   @roster.transform_values {|name| name.sort}
   end  
    
- #binding.pry 
+ 
   
 end 
 
