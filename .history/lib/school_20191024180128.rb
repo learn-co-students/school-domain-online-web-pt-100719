@@ -1,35 +1,30 @@
-require 'pry'
 class School
-  
-  def initialize(school)
-    @school = school
+  def initialize(school_name)
+    @school = school_name
     @roster = {}
   end
-
+  
   def roster
     @roster
   end
-
-  def add_student(name, grade)
-=begin  
+  
+  def add_student(student_name, student_grade)
     @student_name = student_name
     @student_grade = student_grade
     if !@roster.include?(student_grade)
       @roster[student_grade] = []
     end
     @roster[student_grade] << student_name
-=end
-    !@roster.include?(grade) ? (@roster[grade] = [] ; @roster[grade] << name) : @roster[grade] << name #single line refactoring of above method
   end
-
-  def grade(grade_in)
+  
+  def grade(number)
     @roster.each do |grade, student|
-      if grade == grade_in
+      if number == grade
         return student
       end
     end
   end
-
+  
   def sort
     new_hash = {}
     @roster.each do |grade, student|

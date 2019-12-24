@@ -1,4 +1,3 @@
-require 'pry'
 class School
   
   def initialize(school)
@@ -28,13 +27,5 @@ class School
         return student
       end
     end
-  end
-
-  def sort
-    new_hash = {}
-    @roster.each do |grade, student|
-      new_hash[grade] = student.sort
-    end
-    new_hash
   end
 end
